@@ -9,10 +9,6 @@
     font-weight: lighter;
 }
 
-img {
-    width: 100%;
-}
-
 header {
     width: 100%;
     height: 50px;
@@ -58,19 +54,18 @@ header nav a:hover::before {
     width: 100vw;
     height: 100vh;
     margin-top: -50px;
-    overflow: hidden;
-    
+    position: absolute;
+    overflow: hidden;   
 }
 
 .lista-itens {
     background-color: #00000046;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+    width: 100vw;
+    height: 100vh;
 }
 
 .item {
-    position: relative;
+    position: absolute;
 }
 
 .lista-itens img {
@@ -121,6 +116,47 @@ header nav a:hover::before {
     color: #000;
     background-color: #eee;
     transition: 0.5s;
+}
+
+.itemAtivo {
+    z-index: 1;
+}
+
+.lista-miniaturas {
+    display: flex;
+    gap: 20px;
+    width: 40%;
+    height: 150px;
+    position: absolute;
+    bottom: 50px;
+    right: 140px;
+    flex-basis:auto
+}
+
+.miniatura {
+    cursor: pointer;
+    width: 25%; 
+}
+
+.miniatura:hover {
+    scale: 1.1;
+    transition: 0.5s;
+}
+
+.miniatura img {
+    height: 120px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: brightness(80%);
+    box-shadow: 2px 2px 5px #000;
+
+}
+
+.miniatura h2 {
+    text-align: center;
+    font-weight: bolder;
+    text-shadow: 3px 3px 5px #000;
 }
 
 
