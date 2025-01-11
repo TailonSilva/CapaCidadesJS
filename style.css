@@ -55,7 +55,8 @@ header nav a:hover::before {
     height: 100vh;
     margin-top: -50px;
     position: absolute;
-    overflow: hidden;   
+    overflow: hidden;
+    background-color: #000;   
 }
 
 .lista-itens {
@@ -66,6 +67,7 @@ header nav a:hover::before {
 
 .item {
     position: absolute;
+    display: none;
 }
 
 .lista-itens img {
@@ -119,10 +121,17 @@ header nav a:hover::before {
 }
 
 .itemAtivo {
-    z-index: 1;
+    display: block;
+    transition: 0.5s;
+}
+
+.miniaturaAtiva {
+    scale: 1.1;
+    transition: 0.8s;
 }
 
 .lista-miniaturas {
+    z-index: 2;
     display: flex;
     gap: 20px;
     width: 40%;
