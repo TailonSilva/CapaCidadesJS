@@ -82,17 +82,26 @@ header nav a:hover::before {
 
 .lista-itens .texto {
     position: absolute;
-    top: 150px;
-    left: 50px;
+    top: 120px;
+    left: 120px;
     width: 400px;
     margin: auto;
 }
 
-.lista-itens .texto h1 {}
+.lista-itens .texto h1 {
+    font-size: 3.5rem;
+    font-weight: bolder;
+    text-shadow: 3px 3px 5px #000;
+}
 
-.lista-itens .texto p {}
+.lista-itens .texto p {
+    font-size: 1rem;
+    line-height: 1.1rem;
+    text-shadow: 3px 3px 5px #000;
+}
 
 .lista-itens .buttons {
+    margin-top: 20px;
     display: flex;
     width: 300px;
     gap: 10px;
@@ -101,6 +110,17 @@ header nav a:hover::before {
 .lista-itens .buttons button {
     width: 50%;
     flex-grow: 1;
+    color: #eee;
+    background-color: transparent;
+    border: 2px solid #eee;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px #000;
+}
+
+.lista-itens .buttons button:hover {
+    color: #000;
+    background-color: #eee;
+    transition: 0.5s;
 }
 
 
