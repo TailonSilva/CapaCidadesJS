@@ -23,7 +23,7 @@ header {
 }
 
 /*-- Container do menu principal de navegação --*/
-header nav {
+.menu {
     width: 80%;
     margin: auto;
     display: flex;
@@ -33,7 +33,7 @@ header nav {
 }
 
 /*-- Links individuais do menu principal de navegação --*/
-header nav a {
+.menu a {
     font-weight: lighter;
     letter-spacing: 1px;
     position: relative;
@@ -41,7 +41,7 @@ header nav a {
 }
 
 /*-- elemento que cria o Risquinho animado que passa em baixo de cada link do menu --*/
-header nav a::before {
+.menu a::before {
     width: 0%;
     height: 2px;
     background-color: #eee;
@@ -52,10 +52,16 @@ header nav a::before {
 }
 
 /*-- animação do Risquinho que acontece quando passa o mouse --*/
-header nav a:hover::before {
+.menu a:hover::before {
     width: 100%;
     transition: 0.7s;
 }
+
+/*-- Container do menu mobile --*/
+.menu-mobile {
+    display: none;
+}
+
 
 /*-- MAIN --*/
 /*-- Container geral que estão todos os elementos do Main e que gerencia o fundo animado --*/
@@ -199,19 +205,65 @@ header nav a:hover::before {
 
     /*-- HEADER --*/
     /*-- Container do Cabeçalho --*/
-    header {}
+    header {
+        display: flex;
+        justify-content: right;
+        padding: 0  10px;
+    }
 
     /*-- Container do menu principal de navegação --*/
-    header nav {}
+    .menu {
+        display: none;
+    }
+
+    /*-- Container do menu mobile completo --*/
+    .menu-mobile {}
+    
+    /*-- Estilização do Menu Hamburger --*/
+    .menu-mobile-button {
+        display: block;
+        cursor: pointer;
+        background-color: transparent;
+        padding: 2px 8px;
+        border: 1px solid #eee;
+    }
+
+    /*-- Container da lista de links do menu móbile --*/
+    .menu-mobile-list {
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        background-color: #222;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 3px 3px 10px #000;
+        flex-direction: column;
+        align-items: end;
+
+    }
+
+    /*-- Estilização do container do menu móbile quando estiver ativo --*/
+    .menuMobileAtivo {
+        display: flex;
+    }
+
+    /*-- Links individuais do menu móbile --*/
+    .menu-mobile-list a {}
 
     /*-- Links individuais do menu principal de navegação --*/
-    header nav a {}
+    .menu a {}
 
     /*-- elemento que cria o Risquinho animado que passa em baixo de cada link do menu --*/
-    header nav a::before {}
+    .menu a::before {}
 
     /*-- animação do Risquinho que acontece quando passa o mouse --*/
-    header nav a:hover::before {}
+    .menu a:hover::before {}
+
+    /*-- Container do menu mobile --*/
+    .menu-mobile {
+        display: block;
+    }
 
     /*-- MAIN --*/
     /*-- Container geral que estão todos os elementos do Main e que gerencia o fundo animado --*/
