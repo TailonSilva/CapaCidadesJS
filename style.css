@@ -1,3 +1,4 @@
+/*-- Confugirações Globais --*/
 * {
     font-family: "Teko", serif;
     margin: 0;
@@ -9,6 +10,8 @@
     font-weight: lighter;
 }
 
+/*-- HEADER --*/
+/*-- Container do Cabeçalho --*/
 header {
     width: 100%;
     height: 50px;
@@ -19,6 +22,7 @@ header {
     
 }
 
+/*-- Container do menu principal de navegação --*/
 header nav {
     width: 80%;
     margin: auto;
@@ -28,6 +32,7 @@ header nav {
 
 }
 
+/*-- Links individuais do menu principal de navegação --*/
 header nav a {
     font-weight: lighter;
     letter-spacing: 1px;
@@ -35,6 +40,7 @@ header nav a {
 
 }
 
+/*-- elemento que cria o Risquinho animado que passa em baixo de cada link do menu --*/
 header nav a::before {
     width: 0%;
     height: 2px;
@@ -45,11 +51,14 @@ header nav a::before {
     right: 0;
 }
 
+/*-- animação do Risquinho que acontece quando passa o mouse --*/
 header nav a:hover::before {
     width: 100%;
     transition: 0.7s;
 }
 
+/*-- MAIN --*/
+/*-- Container geral que estão todos os elementos do Main e que gerencia o fundo animado --*/
 .container {
     width: 100vw;
     height: 100vh;
@@ -59,18 +68,21 @@ header nav a:hover::before {
     background-color: #000;   
 }
 
-.lista-itens {
-    background-color: #00000046;
-    width: 100vw;
-    height: 100vh;
-}
-
+/*-- Container que gerencia todos os itens --*/
 .item {
     position: absolute;
     display: none;
     opacity: 0;
 }
 
+/*-- Container de cada cidade --*/
+.lista-itens {
+    background-color: #00000046;
+    width: 100vw;
+    height: 100vh;
+}
+
+/*-- Imagem de fundo com a foto da cidade --*/
 .lista-itens img {
     filter: brightness(50%);
     object-fit: cover;
@@ -78,6 +90,7 @@ header nav a:hover::before {
     height: 100%;
 }
 
+/*-- Container que Organiza os textos da capa com nome e descrição da cidade --*/
 .lista-itens .texto {
     position: absolute;
     top: 120px;
@@ -86,18 +99,21 @@ header nav a:hover::before {
     margin: auto;
 }
 
+/*-- Estilização do Nome da Cidade --*/
 .lista-itens .texto h1 {
     font-size: 3.5rem;
     font-weight: bolder;
     text-shadow: 3px 3px 5px #000;
 }
 
+/*-- Estilização da descrição da Cidade --*/
 .lista-itens .texto p {
     font-size: 1rem;
     line-height: 1.1rem;
     text-shadow: 3px 3px 5px #000;
 }
 
+/*-- Container que Organiza os botões da capa --*/
 .lista-itens .buttons {
     margin-top: 20px;
     display: flex;
@@ -105,6 +121,7 @@ header nav a:hover::before {
     gap: 10px;
 }
 
+/*-- Estilização dos botões da capa --*/
 .lista-itens .buttons button {
     width: 50%;
     flex-grow: 1;
@@ -115,22 +132,14 @@ header nav a:hover::before {
     box-shadow: 3px 3px 10px #000;
 }
 
+/*-- Estilização da animação quando passa o mouse nos botões --*/
 .lista-itens .buttons button:hover {
     color: #000;
     background-color: #eee;
     transition: 0.5s;
 }
 
-.itemAtivo {
-    opacity: 1;
-    display: block;
-}
-
-.miniaturaAtiva {
-    scale: 1.07;
-    transition: 0.8s;
-}
-
+/*-- Container que Organiza as miniaturas das cidades --*/
 .lista-miniaturas {
     z-index: 2;
     display: flex;
@@ -143,16 +152,19 @@ header nav a:hover::before {
     flex-basis:auto
 }
 
+/*-- Container que Organiza a miniatura com a Imagem e o Nome da cidade --*/
 .miniatura {
     cursor: pointer;
     width: 25%; 
 }
 
+/*-- Animação que acontece quando passa o Mause sobre a miniatura --*/
 .miniatura:hover {
     scale: 1.07;
     transition: 0.5s;
 }
 
+/*-- Estilização da imagem da miniatura --*/
 .miniatura img {
     height: 120px;
     width: 100%;
@@ -163,10 +175,28 @@ header nav a:hover::before {
 
 }
 
+/*-- Estilização do nome da cidade abaixo da miniatura --*/
 .miniatura h2 {
     text-align: center;
     font-weight: bolder;
     text-shadow: 3px 3px 5px #000;
+}
+
+/*-- Estilização Criada para gerenciar o item ativo via JS --*/
+.itemAtivo {
+    opacity: 1;
+    display: block;
+}
+
+/*-- Estilização Criada para gerenciar a miniatura ativa via JS --*/
+.miniaturaAtiva {
+    scale: 1.07;
+    transition: 0.8s;
+}
+
+/*-- Configuração de Layout resposivo para telas de até 700px --*/
+@media (max-width: 700px) {
+    
 }
 
 
