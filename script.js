@@ -33,3 +33,12 @@ miniPortoAlegre.addEventListener('click', handleClick);
 miniManaus.addEventListener('click', handleClick);
 miniRioDeJaneiro.addEventListener('click', handleClick);
 miniSalvador.addEventListener('click', handleClick);
+
+const menuMobile = document.querySelector('.menu-mobile-button');
+const menuMobileLista = document.querySelector('.menu-mobile-list');
+
+const toggleMenu = () => {
+    menuMobileLista.classList.toggle('menuMobileAtivo');
+}
+
+menuMobile.addEventListener('click', toggleMenu);
